@@ -1,7 +1,7 @@
 const services = require('../services/cepServices.js')
 const cepUtils = require('../utils/validarCep.js')
 
-//
+//Busca do CEP + Validador
 const getCepInfo = async (req, res) => {
     const resultadoValidacao = cepUtils.validar(req.params.cep);
     if (resultadoValidacao.valido == 1) {
@@ -17,6 +17,7 @@ const getHealth = (req, res) => {
     const healthCheck = services.checkingHealth();
     res.status(200).json(healthCheck);
 }
+
 module.exports = {
     getCepInfo,
     getHealth

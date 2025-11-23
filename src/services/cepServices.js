@@ -27,6 +27,6 @@ async function procuraCep(cep) {
 }
 
 module.exports = {
-    procuraCep,
-    checkingHealth
+    checkingHealth,
+    procuraCep
 }
